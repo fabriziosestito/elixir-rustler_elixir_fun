@@ -71,7 +71,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c3e6617fa86bacfb2de792c12e261e0f456bb9ff15038498ae421715bf4128c5"
 dependencies = [
  "lazy_static",
- "rustler_codegen",
+ "rustler_codegen 0.25.0",
+ "rustler_sys",
+]
+
+[[package]]
+name = "rustler"
+version = "0.27.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b7a4037063eab996ea56fada36d3cc982d501ed485b36a73eabdaec99b4acf6e"
+dependencies = [
+ "lazy_static",
+ "rustler_codegen 0.27.0",
  "rustler_sys",
 ]
 
@@ -88,12 +99,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustler_codegen"
+version = "0.27.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b0dbdc98de074c324945ecc2e3ecefa47948ad8e6ed4ecf6f3424f1293a6188d"
+dependencies = [
+ "heck",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "rustler_elixir_fun"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fd2f32baa3a76b4d81ea2c2f9056ac52d016065c29f9aff7bfcf5c171ca8424b"
 dependencies = [
- "rustler",
+ "rustler 0.25.0",
  "rustler_stored_term",
  "rustler_sys",
 ]
@@ -102,7 +125,7 @@ dependencies = [
 name = "rustler_elixir_fun_nif"
 version = "0.3.0"
 dependencies = [
- "rustler",
+ "rustler 0.27.0",
  "rustler_elixir_fun",
  "rustler_stored_term",
  "rustler_sys",
@@ -114,7 +137,7 @@ version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f42e37fdd7198a87732e366b18a65cf5e7ddd32c0f6072661a4d6564a65c19a8"
 dependencies = [
- "rustler",
+ "rustler 0.25.0",
 ]
 
 [[package]]
